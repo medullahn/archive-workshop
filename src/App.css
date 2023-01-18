@@ -39,5 +39,5 @@
 
 @font-face {
   font-family: "SM3 TGothic"; 
-  src: url("./static/fonts/SM3태고딕-Regular.woff");
+  src: url("/src/static/fonts/SM3태고딕-Regular.woff");
 }
