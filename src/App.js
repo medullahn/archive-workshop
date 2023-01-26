@@ -1,7 +1,6 @@
 import './App.css';
 import Artworks from './Artworks';
 import Menus from './components/Menus';
-import RightMenus from './components/RightMenus';
 import styled from 'styled-components';
 import { getRandomInt } from './utils/randomGen';
 import ReactModal from 'react-modal';
@@ -10,22 +9,28 @@ function App() {
   ReactModal.setAppElement('#root');
 
   return (
-    <WindowContainer className='test' url={'background' + String(getRandomInt(1,4))+'.png' }>
-      <Menus/>
-      <RightMenus/>
+    <Main className='test' url={'img/background'+ String(getRandomInt(1,4))+'.png'}>
+      <MainContainer>
+        <Menus/>
+      </MainContainer>
       <Artworks/>
-    </WindowContainer>
-    
+    </Main>
   );
 }
 
-const WindowContainer = styled.div`
-display: flex;
-/* background-image: url(${props => props.url}); */
-width: 100vw;
+const Main = styled.div`
+/* background: url(${props => props.url}) no-repeat center fixed; */
+background: #1A1A1A;
+transition: 1s;
+background-attachment: fixed;
+background-size: cover;
+display: block;
 height: 100vh;
-/* background-attachment: fixed;
-background-size: 100% 100%; */
 `
+
+const MainContainer = styled.div`
+display: block;
+`
+
 export default App;
 

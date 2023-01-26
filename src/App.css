@@ -41,3 +41,16 @@
   font-family: "SM3 TGothic"; 
   src: url("/src/constants/SM3Tgothic-Regular.woff");
 }
+
+@font-face {
+  font-family: "Arial"; 
+  src: url("/src/constants/Arial.woff");
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+}
+
+.swiper{
+  --swiper-theme-color:#fff;
+  }

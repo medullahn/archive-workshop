@@ -1,7 +1,6 @@
 .text {
-    padding: 0rem 0.5rem 1rem 0.5rem;
-    margin-top: 0;
     white-space:pre-wrap;
+    word-break: keep-all;
 }
 
 .text2 {
@@ -15,25 +14,32 @@
     padding: 0rem 0.9rem 0rem 0.9rem;
     display: block;
     color: white;
-    font-family: SM3 TGothic;
-    font-size: 1.5vh;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    transition: max-height 0.5s ease-in-out, background 0.5s;
     max-height:0;
     background: black;
-    border-radius: 0 0 5px 5px;
-    
-    /* border-width: 0px 1px 1px 1px; */
-    /* border-style: solid; */
-    /* border-color: rgba(255, 255, 255, 0.8); */
-    margin-top: -3px;
-    word-break: keep-all;
-    box-sizing: border-box;
     cursor: grab;
-    
+    font-family: SM3 TGothic;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    overflow: hidden;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dev {
+
+    display: block;
+    justify-content: center;
+    background: white;
+    padding: 0rem 0.9rem 0rem 0.9rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
 }
 
 .menupannel {
@@ -41,15 +47,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
     border: none;
     background: black;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     border: 1px solid white;
     /* border: 1px solid rgba(255, 255, 255, 0.8); */
     padding: 0.7rem 0.9rem 0.7rem 0.9rem;
+    transition: background 0.5s;
 
     
     color: white;
