@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import Modal from 'react-modal';
 import {useState, useEffect} from 'react'
+import './Modal.css';
 
 // core version + navigation, pagination modules:
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from '../details.json'
+import title from '../title.json'
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,21 +16,23 @@ import 'swiper/css/pagination';
 const ArtBox = ({color, artist, contents, boxtype}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [items, setItems] = useState([])
-
+    const titles = title[artist]
     const details = data[artist]
+    
+    const [video,setVideo] = useState(null)
     
 
     const handleModal = (flag) => {
         setIsOpen(flag)
         if(flag === false){
-            const window = document.getElementsByClassName('test')[0]
+            const window = document.getElementsByClassName('Background')[0]
             window.style.background = null 
         }
     }
 
     const afterOpenModal = () => {
         // 배경색을 해당 박스 색으로 바꾼다
-        const window = document.getElementsByClassName('test')[0]
+        const window = document.getElementsByClassName('Background')[0]
         window.style.background = color
     }
 
@@ -41,77 +45,146 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
         setItems(tempArr)
     },[artist, contents])
 
+    useEffect(()=>{
+        if(artist === '안연수' || artist === '양찬주' || artist ===  '정승훈'){
+            // 비디오명이 안연수.mp4 일 경우
+            let videoName = artist
+            setVideo(videoName)
+        }
+    },[artist])
+
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width:'95%',
+            maxWidth: '1142px',
+            height:'90%',
+            borderRadius: '4px',
+            border: 'none',
+            padding: '0',
+            background: color,
+            zIndex: '999',
+            boxShadow: '15px 8px 15px 0px rgb(0 0 0 / 40%)'
+            
+        },
+    
+        overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            zIndex: '999'
+        }
+      }
+
 
 
     return(
         <>
-            <BoxContainer url={'img/'+boxtype+'.png'} onClick={()=>handleModal(true)}/>
+            <BoxContainer url={'img/'+boxtype+'.png'} onClick={()=>handleModal(true)} hoverimg={'img/'+items[0]+'.png'}/>
             <Modal
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
                 onRequestClose={()=>handleModal(false)}
                 style={customStyles}
                 contentLabel="Example Modal"
+                // className="Modal"
+                // overlayClassName="Overlay"
+
             >
+            <div style={{background:'none', display:'flex', width: '100%', justifyContent: 'end', position: 'absolute', zIndex:'999', top: '15px'}}>
+                <button className='closebutton' onClick={()=>handleModal(false)}>
+                    Close!
+                </button>
+            </div>
                 <Swiper
                     navigation={{clickable:true}}
                     pagination={{clickable:true}}
-                    style={{height:'70%'}}
+                    style={{height:'75%', backgroundColor: 'black'}}
                     modules={[Navigation, Pagination]}
                     slidesPerView={1}
                     loop={true}
                 >
                     {items.map((element,idx)=>(
-                        <SwiperSlide key={idx} style={{display:'flex', alignItems:'center', justifyContent:'center', }}>
-                            <ArtworkImage url={'img/'+element+'.png'}/>
-                            {/* {'img/'+element+'.png'} */}
+                        <SwiperSlide key={idx} style={{alignItems:'center', justifyContent:'center'}}>
+                            <ArtworkImage url={'img/'+element+'.png'}>
+                            </ArtworkImage>
                         </SwiperSlide>
                     ))}
+                    <SwiperSlide style={{alignItems:'center', justifyContent:'center'}}>
+                    {
+                            video &&
+                            <video controls preload="none" autoPlay muted loop playsInline width="100%" height="100%">
+                                <source src={'img/'+video+'.mp4'} type={'video/mp4'}/>
+                            </video>
+                            }
+                    </SwiperSlide>
                 </Swiper>
-                <div style={{background: color}}>
-                    <div style={{width:'300px'}}>
-                    <Headings>반반 아카이브</Headings>
+                <Content style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                    <Headings>{titles}</Headings>
                     </div>
-                    <div>
-                    <Headings>{artist}</Headings>
+                    <div style={{display: 'flex'}}>
+                    <Names>{artist}</Names>
                     <SubHeadings>{details}</SubHeadings>
                     </div>
-                </div>
+                </Content>
             </Modal>
         </>
     )
 }
 
+const Content = styled.span`
+    padding: 1.2rem;
+`
+
 const Headings = styled.span`
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 130%;
 
+    font-family: SM3 TGothic;
+    font-size: 0.9rem;
+    line-height: 1.1;
     display: flex;
-    align-items: center;
-    letter-spacing: 0.03em;
-
     color: #000000;
-
     margin-bottom:1em;
 `
-const SubHeadings = styled.span`
-    font-size: 13px;
-    line-height: 155.5%;
 
+const Names = styled.span`
+    width: 50rem;
+    padding-right: 15px;
+    font-family: SM3 TGothic;
+    font-size: 0.9rem;
+    line-height: 1.1;
+    display: flex;
+    color: #000000;
+    margin-bottom:1em;
+
+    @media (max-width: 800px) {
+        width: 20%;
+        font-size: 0.8rem;
+    }
+`
+
+
+const SubHeadings = styled.span`
+    font-family: SM3 TGothic;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    word-break: keep-all;
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
-
     color: #000000;
+
+    @media (max-width: 800px) {
+        font-size: 0.8rem;
+        width: 80%;
+    }
 `
 
 const ArtworkImage = styled.div`
     display: flex;
     background-image: url(${props => props.url});
-    background-color:black ;
+    background-color: black;
 
-    width: 100%;
     height: 100%;
 
     background-size: contain;
@@ -122,12 +195,15 @@ const ArtworkImage = styled.div`
 const BoxContainer = styled.div`
     @media (max-width: 800px) {
         position: static;
+        margin: 1.5px 1.5px 1.5px 1.5px;
+        width: 120px;
+        height: 190px;
     }
 
     background-image: url(${props => props.url});
     background-size: 100% 100%;
     width: 180px;
-    height: 290px;
+    height: 283px;
     display: inline-block;
     position: absolute;
     box-shadow: 15px 8px 15px 0px rgb(0 0 0 / 40%);
@@ -136,30 +212,15 @@ const BoxContainer = styled.div`
 
     /* hover시 썸네일 */
     &:hover{  
-        transform: scale(1.1);
-        transition: 0.1s linear;
-        z-index: 998;
+        background-color: black;
+        background-image: url(${props => props.hoverimg});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 3;
     }
 `
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width:'70vw',
-        height:'67vh',
-        borderRadius: 'none',
-        border: 'none',
-        padding: '0',
-        background: 'none',
-
-    // 모바일일 경우 미디어쿼리로 modal 크기 조정
-    },
-    overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)'
-    }
-  };
   
 
 export default ArtBox

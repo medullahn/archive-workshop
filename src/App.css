@@ -28,6 +28,81 @@
   color: #61dafb;
 }
 
+.Maintext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: white;
+  padding: 0rem 0.3rem 0rem 0.3rem;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  color: black;
+  font-family: SM3 TGothic;
+  /* font-size: 30px; */
+  font-size: 1.3rem;
+  line-height: 1.1;
+  word-break: keep-all;
+  margin: 0;
+}
+
+@media (max-width: 1280px) {
+  .Maintext
+  {font-size: 1.1rem;}
+}
+
+@media (max-width: 800px) {
+  .Maintext
+  {font-size: 0.8rem;}
+}
+
+.Hovertext {
+  width: 5.9rem;
+  text-align: center;
+  position: relative;
+  background: white;
+  padding: 0rem 0.3rem 0rem 0.3rem;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  color: black;
+  font-family: SM3 TGothic;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  word-break: keep-all;
+  margin: 0;
+}
+
+.Vphover{
+  display : none;
+}
+
+.Vp{
+  justify-content: center;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  border: none;
+  background: white;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  color: black;
+  font-family: SM3 TGothic;
+  font-size: 0.5rem;
+  line-height: 1.1;
+  word-break: keep-all;
+  z-index: 997;
+  cursor: grab;
+}
+
+@media (max-width: 800px) {
+  .Vp {display: none;}
+}
+
+.Vp:hover + .Vphover{
+  display : block;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -53,4 +128,22 @@
 
 .swiper{
   --swiper-theme-color:#fff;
+  --swiper-navigation-size: 20px;
   }
+
+  @media (min-width: 800px) {
+    .swiper {--swiper-navigation-size: 30px;}
+}
+
+.closebutton {
+  color:black;
+  background: white;
+  border: none;
+  padding: 0;
+  font-family: Arial;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 800px) {
+  .closebutton {font-size: 1.1rem;}
+}

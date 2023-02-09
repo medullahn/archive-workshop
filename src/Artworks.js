@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import styled from 'styled-components'
 import ArtBox from './components/ArtBox';
 import {blue, yellow, gray} from './constants/colors'
 import { getRandomInt } from './utils/randomGen';
@@ -11,17 +12,16 @@ const Artworks = () => {
 
 
     // 사람 명수 만큼 artbox 생성을 위한 배열
-    const participants = ['안연수','테스트','1','2','3','4','5','6','7','8','9','10','11','12','13']
-    const contents = [15, 2]
-    const boxcolor = [blue, yellow, gray] 
-    const boxtype = ['box_blue', 'box_yellow', 'box_grey', 'box_blue', 'box_yellow', 'box_grey', 'box_blue', 'box_yellow', 'box_grey', 'box_blue', 'box_yellow', 'box_grey','box_blue', 'box_yellow', 'box_grey']
+    const participants = ['윤지수','박서현','양찬주','이하림','김세희','정승훈','이가영','김경수','양희수','안연수','이정빈','김예진','김준호','김유진','김나현','김경준','한유진','정지민','채지민','도현서']
+    const contents = [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+    const boxcolor = [blue, yellow, gray, yellow, gray, blue, gray, yellow, blue, blue, gray, yellow, blue, yellow, gray, yellow, blue, gray, gray, blue] 
+    const boxtype = ['box_blue', 'box_yellow', 'box_grey', 'box_yellow', 'box_grey', 'box_blue', 'box_grey', 'box_yellow', 'box_blue', 'box_blue', 'box_grey', 'box_yellow','box_blue', 'box_yellow', 'box_grey', 'box_yellow', 'box_blue', 'box_grey', 'box_grey', 'box_blue']
     const { height, width } = useWindowDimensions();
     
     
     // ArtBoxContainer 내부에서 랜덤으로 위치를 부여하는 함수
     useEffect(()=>{
         let idx = -1
-        const colorPalette = [blue, yellow, gray]
         // 랜덤으로 부여될 컨테이너의 길이와 높이를 가져옴
         const {width, height} = getDisplayInfo(ArtBoxContainer.current)
 
@@ -40,14 +40,13 @@ const Artworks = () => {
     
                 idx = (idx + 1) % 3
 
-                child.style.backgroundColor = colorPalette[idx]
             }
     }
     },[height, width])
 
     return(
         
-        <div style={{width:'100%'}} ref={ArtBoxContainer}>
+        <Artwork ref={ArtBoxContainer}>
             {
                 participants.map((element,index)=>(
                     <ArtBox color={boxcolor[index]} artist={element} contents={contents[index]} key={index} boxtype={boxtype[index]}/>
@@ -55,9 +54,17 @@ const Artworks = () => {
                 ))
             }
             
-        </div>
+        </Artwork>
         
     )
 }
+
+const Artwork = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding-top:20px
+`
+
 
 export default Artworks;

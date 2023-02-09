@@ -10,11 +10,45 @@
     padding: 0rem 0.5rem 1rem 0.5rem;
 }
 
+.MenuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+  }
+
+  .MenuButtonEn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: Arial;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+  }
+
 .menuaccordion {
     padding: 0rem 0.9rem 0rem 0.9rem;
     display: block;
     color: white;
-    transition: max-height 0.5s ease-in-out, background 0.5s;
+    transition: max-height 0.5s ease-in-out;
     max-height:0;
     background: black;
     cursor: grab;
@@ -64,4 +98,107 @@
     text-align: center;
     word-break: keep-all;
 
+}
+
+.Caption {
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.Person {
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.Konkuk {
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.Typo {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.Somoim {
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 0rem 0.3rem 0rem 0.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+    font-family: SM3 TGothic;
+    /* font-size: 30px; */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    word-break: keep-all;
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .MenuButton, .MenuButtonEn, .Caption, .Person, .Konkuk, .Typo, .Somoim
+    {font-size: 1.1rem;}
+}
+
+@media (max-width: 800px) {
+    .Konkuk, .Typo{align-self: end;}
+}
+
+@media (max-width: 800px) {
+    .Person {align-self: center;}
 }
