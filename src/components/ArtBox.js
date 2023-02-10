@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+
 const ArtBox = ({color, artist, contents, boxtype}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [items, setItems] = useState([])
@@ -35,7 +36,7 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
         const window = document.getElementsByClassName('Background')[0]
         window.style.background = color
     }
-
+     
     useEffect(()=>{
         let tempArr = []
         for(let i=1; i<=contents; i++){

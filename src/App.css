@@ -147,3 +147,7 @@
 @media (max-width: 800px) {
   .closebutton {font-size: 1.1rem;}
 }
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
