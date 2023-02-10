@@ -26,15 +26,25 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
     const handleModal = (flag) => {
         setIsOpen(flag)
         if(flag === false){
-            const window = document.getElementsByClassName('Background')[0]
-            window.style.background = null 
+            const back = document.getElementsByClassName('Background')[0]
+            back.style.background = null 
+
+            const scrollY = document.body.style.top
+            document.body.style.position = ''
+            document.body.style.top = ''
+            window.scrollTo(0, parseInt(scrollY || '0') * -1)
         }
     }
 
     const afterOpenModal = () => {
         // 배경색을 해당 박스 색으로 바꾼다
-        const window = document.getElementsByClassName('Background')[0]
-        window.style.background = color
+        
+        const back = document.getElementsByClassName('Background')[0]
+        back.style.background = color
+
+        document.body.style.top = `-${window.scrollY}px`
+        document.body.style.position = 'fixed'
+
     }
      
     useEffect(()=>{
