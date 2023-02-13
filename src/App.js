@@ -19,7 +19,7 @@ function App() {
       <Artworks/>
       <Hover>
       <Vp className='Vp' onClick={refreshPage}><p style={{display: 'flex',alignItems: 'center'}}>소실점</p></Vp>
-        <VpHover className='Vphover'>
+        {/* <VpHover className='Vphover'>
           <Hovertext style={{left:'5%', top:'14%', scale:'0.9'}}><p style={{margin:'0'}}>아카이브!</p></Hovertext>
           <Hovertext style={{left:'7%', top:'28%', scale:'0.9'}}><p style={{margin:'0'}}>아카이브!</p></Hovertext>
           <Hovertext style={{left:'7%', top:'87%', scale:'0.9'}}><p style={{margin:'0'}}>아카이브!</p></Hovertext>
@@ -60,7 +60,7 @@ function App() {
           <Hovertext style={{left:'53%', top:'52%', scale:'0.4'}}><p style={{margin:'0'}}>아카이브!</p></Hovertext>
           <Hovertext style={{left:'52%', top:'46%', scale:'0.4'}}><p style={{margin:'0'}}>아카이브!</p></Hovertext>
           <Hovertext style={{left:'43%', top:'47%', scale:'0.4'}}><p style={{margin:'0'}}>아카이브!</p></Hovertext>
-        </VpHover>
+        </VpHover> */}
       </Hover>
       <LeftText>
         <p className='Maintext' style={{alignSelf:'start'}}>관심사</p>
@@ -78,8 +78,8 @@ function App() {
         <p className='Maintext' style={{alignSelf:'end'}}>확장</p>
       </RightText>
       <BottomText>
-      <p className='Maintext' style={{alignSelf:'center'}}>소모임 여름 워크숍</p>
-      <p className='Maintext' style={{alignSelf:'center'}}>아카이빙 웹사이트</p>
+      <p className='Footer' style={{alignSelf:'center'}}>소모임 여름 워크숍</p>
+      <p className='Footer' style={{alignSelf:'center'}}>아카이빙 웹사이트</p>
       </BottomText>
     </Main>
   );
@@ -90,25 +90,25 @@ const Vp = styled.div`
 const Hover = styled.div`
 `
 
-const Hovertext = styled.div`
-justify-content: center;
-display: flex;
-padding: 0rem 0.3rem 0rem 0.3rem;
-margin: 0;
-position: fixed;
-top:50%;
-left:50%;
-border: none;
-background: white;
-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-color: black;
-font-family: SM3 TGothic;
-font-size: 1.3rem;
-line-height: 1.1;
-word-break: keep-all;
-z-index: 997;
-transform: translate(-50%, -50%);
-`
+// const Hovertext = styled.div`
+// justify-content: center;
+// display: flex;
+// padding: 0rem 0.3rem 0rem 0.3rem;
+// margin: 0;
+// position: fixed;
+// top:50%;
+// left:50%;
+// border: none;
+// background: white;
+// box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+// color: black;
+// font-family: SM3 TGothic;
+// font-size: 1.3rem;
+// line-height: 1.1;
+// word-break: keep-all;
+// z-index: 997;
+// transform: translate(-50%, -50%);
+// `
 
 
 const Main = styled.div`
@@ -120,8 +120,8 @@ overflow-x: hidden;
 overflow-y: hidden;
 `
 
-const VpHover = styled.div`
-`
+// const VpHover = styled.div`
+// `
 
 const MainContainer = styled.div`
 `

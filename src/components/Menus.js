@@ -96,7 +96,7 @@ const Menus = () => {
                 </MenuAccordion>
             </Person>
             <Somoim>
-                <MenuPannel onClick={(e)=>onclickAccordion(3)}>
+                <MenuPannel className='somoim' onClick={(e)=>onclickAccordion(3)}>
                     <p className='Konkuk'>건국대학교</p>
                     <p className='Typo'>타이포그래피</p>
                     <p className='Somoim'>소모임</p>
@@ -134,7 +134,10 @@ const MenuContainer = styled.div`
 
 const Title = styled.div`
     display: flex;
-    width: 40%;
+    width: 35%;
+    &:hover{
+        z-index: 999;
+    }
 @media (max-width: 1280px) {
 width: 45%;
 }
@@ -146,7 +149,7 @@ padding-bottom: 3rem;
 
 const Menu = styled.div`
     display: flex;
-    width: 60%;
+    width: 65%;
     @media (max-width: 1280px) {
     width: 55%;
     @media (max-width: 800px) {

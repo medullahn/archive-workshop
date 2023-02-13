@@ -36,7 +36,7 @@
     padding: 0rem 0.3rem 0rem 0.3rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: Arial;
+    font-family: SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -51,7 +51,6 @@
     transition: max-height 0.5s ease-in-out;
     max-height:0;
     background: black;
-    cursor: grab;
     font-family: SM3 TGothic;
     font-size: 0.9rem;
     line-height: 1.6;
@@ -116,7 +115,12 @@
     line-height: 1.1;
     word-break: keep-all;
     margin: 0;
+    cursor: grab;
 }
+
+.Caption:hover {
+    background: #0094FF;
+  }
 
 .Person {
     align-self: start;
@@ -134,7 +138,20 @@
     line-height: 1.1;
     word-break: keep-all;
     margin: 0;
+    cursor: grab;
 }
+
+.somoim {
+    cursor: grab;
+}
+
+.somoim:hover > p{
+    background: #474747;
+  }
+
+.Person:hover {
+    background: #FFD600;
+  }
 
 .Konkuk {
     align-self: start;

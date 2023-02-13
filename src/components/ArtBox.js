@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Modal from 'react-modal';
 import {useState, useEffect} from 'react'
-import './Modal.css';
 
 // core version + navigation, pagination modules:
 import { Navigation, Pagination } from 'swiper';
@@ -12,7 +11,6 @@ import title from '../title.json'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
 
 const ArtBox = ({color, artist, contents, boxtype}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -102,7 +100,9 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
                 // overlayClassName="Overlay"
 
             >
-            <div style={{background:'none', display:'flex', width: '100%', justifyContent: 'end', position: 'absolute', zIndex:'999', top: '15px'}}>
+            <div style={{background:'black', width: '100%',zIndex:'1',height:'200px', position: 'absolute', top: '-100px'}}>
+            </div>
+            <div style={{background:'none', display:'flex', width: '100%', justifyContent: 'end', position: 'sticky', zIndex:'999', top: '15px'}}>
                 <button className='closebutton' onClick={()=>handleModal(false)}>
                     Close!
                 </button>
@@ -133,7 +133,7 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
                 <Content style={{display: 'flex', flexDirection: 'column'}}>
                     <div style={{display: 'flex'}}>
                     <Headings>{titles}</Headings>
-                    </div>
+                    </div       >
                     <div style={{display: 'flex'}}>
                     <Names>{artist}</Names>
                     <SubHeadings>{details}</SubHeadings>
@@ -149,8 +149,7 @@ const Content = styled.span`
 `
 
 const Headings = styled.span`
-
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     font-size: 0.9rem;
     line-height: 1.1;
     display: flex;
@@ -161,12 +160,13 @@ const Headings = styled.span`
 const Names = styled.span`
     width: 50rem;
     padding-right: 15px;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     font-size: 0.9rem;
     line-height: 1.1;
     display: flex;
     color: #000000;
     margin-bottom:1em;
+
 
     @media (max-width: 800px) {
         width: 20%;
@@ -176,7 +176,7 @@ const Names = styled.span`
 
 
 const SubHeadings = styled.span`
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     font-size: 0.9rem;
     line-height: 1.6;
     word-break: keep-all;
@@ -184,6 +184,7 @@ const SubHeadings = styled.span`
     align-items: center;
     letter-spacing: 0.03em;
     color: #000000;
+    white-space: pre-wrap;
 
     @media (max-width: 800px) {
         font-size: 0.8rem;
