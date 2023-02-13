@@ -147,6 +147,7 @@
 
 .somoim:hover > p{
     background: #474747;
+    z-index: 999;
   }
 
 .Person:hover {

@@ -100,9 +100,9 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
                 // overlayClassName="Overlay"
 
             >
-            <div style={{background:'black', width: '100%',zIndex:'1',height:'200px', position: 'absolute', top: '-100px'}}>
-            </div>
-            <div style={{background:'none', display:'flex', width: '100%', justifyContent: 'end', position: 'sticky', zIndex:'999', top: '15px'}}>
+            {/* <div style={{background:'black', width: '100%',zIndex:'1',height:'400px', position: 'absolute', top: '-100px'}}>
+            </div> */}
+            <div style={{background:'none', display:'flex', width: '100%', justifyContent: 'end', position: 'sticky', zIndex:'999', top: '0.7rem'}}>
                 <button className='closebutton' onClick={()=>handleModal(false)}>
                     Close!
                 </button>
