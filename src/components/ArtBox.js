@@ -221,6 +221,7 @@ const BoxContainer = styled.div`
     box-shadow: 15px 8px 15px 0px rgb(0 0 0 / 40%);
     border-radius: 0.2rem;
     box-sizing: border-box;
+    cursor: grab;
 
     /* hover시 썸네일 */
     &:hover{  
