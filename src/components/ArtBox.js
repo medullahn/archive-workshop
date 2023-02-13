@@ -76,7 +76,6 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
             background: color,
             zIndex: '999',
             boxShadow: '15px 8px 15px 0px rgb(0 0 0 / 40%)'
-            
         },
     
         overlay: {
