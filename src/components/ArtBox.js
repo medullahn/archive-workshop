@@ -95,6 +95,7 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
                 onRequestClose={()=>handleModal(false)}
                 style={customStyles}
                 contentLabel="Example Modal"
+                id="modal"
                 // className="Modal"
                 // overlayClassName="Overlay"
 

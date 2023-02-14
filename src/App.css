@@ -168,6 +168,6 @@
   .closebutton {font-size: 1.1rem;}
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
+#modal::-webkit-scrollbar {
+ display: none;
 }
