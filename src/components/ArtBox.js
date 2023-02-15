@@ -162,10 +162,11 @@ const Names = styled.span`
     padding-right: 15px;
     font-family: SM3 TGothic, SuisseIntl;
     font-size: 0.9rem;
-    line-height: 1.1;
+    line-height: 1.6;
     display: flex;
     color: #000000;
     margin-bottom:1em;
+    letter-spacing: 0.03em;
 
 
     @media (max-width: 800px) {

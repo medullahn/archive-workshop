@@ -16,10 +16,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -33,10 +33,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SuisseIntl;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -51,7 +51,7 @@
     transition: max-height 0.5s ease-in-out;
     max-height:0;
     background: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     font-size: 0.9rem;
     line-height: 1.6;
     letter-spacing: 0.03em;
@@ -68,7 +68,7 @@
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
 
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -90,7 +90,7 @@
 
     
     color: white;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     font-size: 3vh;
     line-height: 1.5;
     letter-spacing: 0.03em;
@@ -106,10 +106,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -129,10 +129,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -161,10 +161,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -179,10 +179,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
@@ -197,10 +197,10 @@
     align-items: center;
     border: none;
     background: white;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0.1rem 0.2rem;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
     color: black;
-    font-family: SM3 TGothic;
+    font-family: SM3 TGothic, SuisseIntl;
     /* font-size: 30px; */
     font-size: 1.3rem;
     line-height: 1.1;
