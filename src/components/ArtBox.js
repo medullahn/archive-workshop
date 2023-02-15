@@ -122,7 +122,7 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
                         </SwiperSlide>
                     ))}
                     <SwiperSlide style={{alignItems:'center', justifyContent:'center'}}>
-                    {
+                            {
                             video &&
                             <video controls preload="none" autoPlay muted loop playsInline width="100%" height="100%">
                                 <source src={'img/'+video+'.mp4'} type={'video/mp4'}/>
