@@ -55,7 +55,7 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
     },[artist, contents])
 
     useEffect(()=>{
-        if(artist === '안연수' || artist === '양찬주' || artist ===  '정승훈'){
+        if(artist === '안연수' || artist === '김세희' || artist ===  '김경수'){
             // 비디오명이 안연수.mp4 일 경우
             let videoName = artist
             setVideo(videoName)
@@ -121,14 +121,13 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
                             </ArtworkImage>
                         </SwiperSlide>
                     ))}
+                    {video &&
                     <SwiperSlide style={{alignItems:'center', justifyContent:'center'}}>
-                            {
-                            video &&
                             <video controls preload="none" autoPlay muted loop playsInline width="100%" height="100%">
                                 <source src={'img/'+video+'.mp4'} type={'video/mp4'}/>
                             </video>
-                            }
                     </SwiperSlide>
+                    }
                 </Swiper>
                 <Content style={{display: 'flex', flexDirection: 'column'}}>
                     <div style={{display: 'flex'}}>
