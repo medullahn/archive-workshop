@@ -13,7 +13,7 @@ const Artworks = () => {
 
     // 사람 명수 만큼 artbox 생성을 위한 배열
     const participants = ['윤지수','박서현','양찬주','이하림','김세희','정승훈','이가영','김경수','양희수','김나현','이정빈','김예진','김준호','김유진','안연수','김경준','채지민','정지민','한유진','도현서']
-    const contents = [7, 16, 16, 17, 16, 12, 5, 19, 11, 17, 19, 15, 17, 10, 14, 14, 14, 14, 14, 17]
+    const contents = [7, 16, 16, 17, 16, 12, 5, 19, 11, 17, 19, 15, 17, 10, 14, 13, 14, 14, 14, 17]
     const boxcolor = [yellow, blue, gray, yellow, gray, blue, gray, blue, yellow, yellow, gray, blue, gray, blue, gray, blue, yellow, blue, blue, yellow] 
     const boxtype = ['box_yellow', 'box_blue', 'box_grey', 'box_yellow', 'box_grey', 'box_blue', 'box_grey', 'box_blue', 'box_yellow', 'box_yellow', 'box_grey', 'box_blue', 'box_grey', 'box_blue', 'box_grey', 'box_blue', 'box_yellow', 'box_blue', 'box_blue', 'box_yellow']
     const { height, width } = useWindowDimensions();
