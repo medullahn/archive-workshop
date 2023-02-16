@@ -92,7 +92,7 @@ const Menus = () => {
                     <p className='Person'>참여자</p>
                 </MenuPannel>
                 <MenuAccordion ref={Accordion1} className='menuaccordion'>
-                    <p className='text' style={{display:'block', textAlign:'center', paddingBottom: '0.1rem'}}>김경수 김경준 김나현 김예진 김유진 김준호 도현서 박서현 양찬주 양희수 윤지수 이정빈 정승훈 정지민 이하림 채지민 한유진 이가영 안연수 김세희</p>     
+                    <p className='text' style={{display:'block', textAlign:'center'}}>김경수 김경준 김나현 김예진 김유진 김준호 도현서 박서현 양찬주 양희수 윤지수 이정빈 정승훈 정지민 이하림 채지민 한유진 이가영 안연수 김세희</p>     
                 </MenuAccordion>
             </Person>
             <Somoim>
@@ -160,7 +160,7 @@ const Menu = styled.div`
 `
 
 const ProjectSummary = styled.div`
-    width: 55%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     @media (max-width: 800px) {
@@ -169,7 +169,7 @@ const ProjectSummary = styled.div`
 `
 
 const Person = styled.div`
-    width: 20%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     @media (max-width: 800px) {
