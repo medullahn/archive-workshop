@@ -55,7 +55,7 @@ const ArtBox = ({color, artist, contents, boxtype}) => {
     },[artist, contents])
 
     useEffect(()=>{
-        if(artist === '안연수' || artist === '김세희'){
+        if(artist === '안연수' || artist === '김세희' || artist === '김경수'){
             // 비디오명이 안연수.mp4 일 경우
             let videoName = artist
             setVideo(videoName)
